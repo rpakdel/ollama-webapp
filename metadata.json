@@ -1,0 +1,5 @@
+{
+  "name": "Ollama Web Explorer",
+  "description": "A sophisticated React interface for interacting with local Ollama LLMs via a Node.js Express backend, featuring real-time streaming and model management.",
+  "requestFramePermissions": []
+}
