@@ -15,5 +15,5 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev
 COPY --from=builder /app/dist ./dist
 COPY server.js ./server.js
-EXPOSE 3000
-CMD ["node", "server.js"]
+EXPOSE 8080
+CMD ["npm", "start"]
