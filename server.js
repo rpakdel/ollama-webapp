@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5001;
 const OLLAMA_URL = process.env.OLLAMA_URL || 'http://host.docker.internal:11434';
 
 app.use(cors());

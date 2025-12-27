@@ -1,16 +1,14 @@
-
-version: '3.8'
-
 services:
   ollama-web:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - "3000:3000"
+    network_mode: "host"
     environment:
-      - NODE_ENV=production
-      - OLLAMA_URL=http://host.docker.internal:11434
+      - NODE_ENV=development
+      - OLLAMA_URL=${OLLAMA_URL:-http://localhost:11434}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: always
